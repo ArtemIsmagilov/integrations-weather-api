@@ -8,7 +8,7 @@ from weather_api.routers import (
 
 def create_app() -> FastAPI:
     app = FastAPI(
-        title="WeatherAPI",
+        title="Integrations WeatherAPI",
     )
 
     app.include_router(root.router)
