@@ -1,0 +1,5 @@
+services:
+  memcached:
+    image: "memcached:alpine"
+    ports:
+      - "127.0.0.1:11211:11211"

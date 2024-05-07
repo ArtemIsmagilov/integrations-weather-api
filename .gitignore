@@ -1,0 +1,16 @@
+.venv/
+.idea/
+.ruff_cache/
+.env
+database.sqlite3
+*.log
+
+*.pyc
+__pycache__/
+
+.pytest_cache/
+.coverage
+htmlcov/
+
+dist/
+build/
