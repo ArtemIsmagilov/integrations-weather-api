@@ -30,5 +30,5 @@ def test_temperature(client, mock_pool):
     response = client.get("/cities/temperature/Самара")
     assert response.status_code == 200
 
-    mock_pool.delete("Москва")
+    mock_pool.delete("Самара")
     mock_pool.delete("Тольятти")
