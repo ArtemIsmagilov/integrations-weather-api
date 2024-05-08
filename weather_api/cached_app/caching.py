@@ -6,6 +6,7 @@ from meta_memcache import (
 
 from weather_api.settings import conf
 
+
 pool = CacheClient.cache_client_from_servers(
     servers=[
         ServerAddress(host=conf.MEMCACHED_HOST, port=conf.MEMCACHED_PORT),
