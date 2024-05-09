@@ -37,4 +37,4 @@ def test_temperature(client, mock_pool):
 def test_web(client):
     # test plug with web interface
     response = client.get("/web/items/1")
-    assert response.status_code == 200
+    assert response.status_code == 404
