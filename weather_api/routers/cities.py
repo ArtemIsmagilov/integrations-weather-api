@@ -58,15 +58,15 @@ async def temperature_city(
 
     - **city_name**: title city, require
     """
+    if cached_city := caching.get_city(city_name):
+        return [TemperatureCity(**i) for i in cached_city]
+
     city = await crud.get_city_by_name(cur, city_name)
     if city is None:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
             detail=details.city_not_found(city_name),
         )
-
-    if cached_city := caching.get_city(city_name):
-        return [TemperatureCity(**i) for i in cached_city]
 
     response = await simply_procedures.send_req_weatherapi(city["lat"], city["lon"])
 
