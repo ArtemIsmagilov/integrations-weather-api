@@ -14,13 +14,14 @@ class DevConf:
     MEMCACHED_HOST = os.environ.get("MEMCACHED_HOST", "127.0.0.1")
     MEMCACHED_PORT = int(os.environ.get("MEMCACHED_PORT", 11211))
 
+    weatherapi_url = (
+        "https://api.met.no/weatherapi/locationforecast/2.0/compact?lat={}&lon={}"
+    )
+    weatherapi_headers = {
+        "User-Agent": "weather_api/0.1.0",
+        "From": EMAIL,
+        "Accept-Encoding": "gzip, deflate",
+    }
+
 
 conf = DevConf()
-conf.weatherapi_url = (
-    "https://api.met.no/weatherapi/locationforecast/2.0/compact?lat={}&lon={}"
-)
-conf.weatherapi_headers = {
-    "User-Agent": "weather_api/0.1.0",
-    "From": conf.EMAIL,
-    "Accept-Encoding": "gzip, deflate",
-}

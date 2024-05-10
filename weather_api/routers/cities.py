@@ -1,4 +1,3 @@
-from sqlite3 import Cursor
 from typing import Annotated
 from datetime import (
     datetime,
@@ -13,6 +12,7 @@ from fastapi import (
     Query,
     Depends,
 )
+from aiosqlite import Cursor
 
 from weather_api import (
     details,

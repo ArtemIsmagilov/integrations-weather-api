@@ -9,7 +9,7 @@ from weather_api.settings import conf
 
 
 async def send_req_weatherapi(
-    lat: str, lon: str, if_modified_since: str = None
+    lat: str, lon: str, if_modified_since: str | None = None
 ) -> Response:
     async with AsyncClient() as ac:
         headers = conf.weatherapi_headers.copy()
