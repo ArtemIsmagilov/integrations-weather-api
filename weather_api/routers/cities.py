@@ -18,7 +18,7 @@ from weather_api import (
     details,
     simply_procedures,
 )
-from weather_api.shemas import (
+from weather_api.schemas import (
     TemperatureCity,
     City,
 )

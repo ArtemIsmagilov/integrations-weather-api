@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from weather_api.shemas import PingPong
+from weather_api.schemas import PingPong
 
 router = APIRouter(
     prefix="/root",
