@@ -111,3 +111,5 @@ Additional synchronization required.
     https://stackoverflow.com/questions/52083380/in-docker-image-names-what-is-the-difference-between-alpine-jessie-stretch-an
 20. Requirements format - https://pip.pypa.io/en/stable/reference/requirements-file-format/
 21. Importance, history, evolution and etc. memcached +/- - https://www.dragonflydb.io/guides/memcached
+22. Scaling smoothly: RevenueCat’s data-caching techniques for 1.2 billion daily API requests -
+    https://www.revenuecat.com/blog/engineering/data-caching-revenuecat/

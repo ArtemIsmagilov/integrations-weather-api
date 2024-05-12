@@ -78,7 +78,6 @@ async def temperature_city(
     )
 
     ttl_expires = int((dt_expires - datetime.now(UTC)).total_seconds())
-
     if response.status_code == status.HTTP_200_OK:
         result = extract_celsius_time(response.json())
         caching.set_city(city_name, result, ttl_expires)

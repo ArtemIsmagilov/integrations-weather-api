@@ -1,13 +1,12 @@
 from typing import AsyncGenerator
 
 import aiosqlite
-from aiosqlite import Cursor
 
 from weather_api.settings import conf
 from weather_api.logger import logger
 
 
-async def get_db() -> AsyncGenerator[Cursor, None]:
+async def get_db() -> AsyncGenerator[aiosqlite.Cursor, None]:
     conn = await aiosqlite.connect(conf.DATABASE_URL)
     conn.row_factory = aiosqlite.Row
 

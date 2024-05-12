@@ -2,6 +2,7 @@ from meta_memcache import (
     ServerAddress,
     CacheClient,
     connection_pool_factory_builder,
+    Key,
 )
 
 from weather_api.settings import conf
@@ -16,8 +17,8 @@ pool = CacheClient.cache_client_from_servers(
 
 
 def set_city(city_name: str, time_cels_list: list[dict], ttl: int) -> bool:
-    return pool.set(city_name, time_cels_list, ttl)
+    return pool.refill(Key(city_name), time_cels_list, ttl)
 
 
 def get_city(city_name: str) -> list[dict] | None:
-    return pool.get(city_name)
+    return pool.get(Key(city_name))
