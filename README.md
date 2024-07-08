@@ -46,6 +46,7 @@
      sudo docker exec -it --user=root  <id container> sh
     ```
    - install telnet on alpine version
+     https://gist.github.com/Ryanb58/9e63e186981090d4f2de8ec0ea420e1d
     ```bash
     apk update
     apk add busybox-extras
