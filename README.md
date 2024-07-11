@@ -53,7 +53,7 @@
     netstat -tulpn | grep LISTEN
     telnet 127.0.0.1 11211
     ```
-   - or use nc(not need installing depends)
+   - or use netcat-freebsd(not need installing depends)
     ```bash
     nc 127.0.0.1 11211
     ```
